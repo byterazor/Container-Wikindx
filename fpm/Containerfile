@@ -25,7 +25,9 @@ ADD files/wikindx_pool.conf /etc/php/8.2/fpm/pool/
 ADD files/entryPoint.sh /entryPoint.sh
 
 RUN chmod a+x /entryPoint.sh
-RUN chown -R fpm.fpm /var/log/php82
+RUN chown -R fpm /var/log/php82
+RUN chgrp -R fpm /var/log/php82
+
 RUN ln -s /dev/stdout /var/log/php82/error.log
 RUN ln -s /dev/stdout /var/log/php82/access.log
 USER fpm

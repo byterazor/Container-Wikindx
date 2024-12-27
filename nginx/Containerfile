@@ -9,8 +9,8 @@ FROM alpine:latest
 RUN apk update && apk add --no-cache bash ca-certificates tini nginx
 
 COPY --from=builder /wikindx /var/www/html/
-RUN chown -R nginx.nginx /var/www/html/
-
+RUN chown -R nginx /var/www/html/
+RUN chgrp -R nginx /var/www/html/
 ADD files/entryPoint.sh /entryPoint.sh
 RUN chmod a+x /entryPoint.sh
 
