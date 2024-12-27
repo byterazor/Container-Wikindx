@@ -18,7 +18,8 @@ RUN addgroup fpm && adduser -u 8888 -D -G fpm fpm
 
 RUN rm -rf /var/www/html/*
 COPY --from=builder /wikindx /var/www/html/
-RUN chown -R fpm.fpm /var/www/html/
+RUN chown -R fpm /var/www/html/
+RUN chgrp -R fpm /var/www/html/
 
 ADD files/wikindx_pool.conf /etc/php/8.2/fpm/pool/
 ADD files/entryPoint.sh /entryPoint.sh

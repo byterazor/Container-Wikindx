@@ -16,8 +16,8 @@ RUN chmod a+x /entryPoint.sh
 
 ADD files/default.conf /etc/nginx/http.d/
 RUN sed -i '1idaemon off;' /etc/nginx/nginx.conf
-RUN chown -R nginx.nginx /etc/nginx 
-
+RUN chown -R nginx /etc/nginx 
+RUN chgrp -R nginx /etc/nginx
 
 USER nginx
 
