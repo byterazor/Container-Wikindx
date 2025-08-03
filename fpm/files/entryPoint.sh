@@ -28,13 +28,13 @@ echo "`cat <<EOF
 <?php
 class CONFIG
 {
-    public \\$WIKINDX_DB_HOST = \"${WIKINDX_DB_HOST}\";
-    public \\$WIKINDX_DB = \"${WIKINDX_DB}\";
-    public \\$WIKINDX_DB_USER = \"${WIKINDX_DB_USER}\";
-    public \\$WIKINDX_DB_PASSWORD = \"${WIKINDX_DB_PASSWORD}\";
-    public \\$WIKINDX_MEMORY_LIMIT = \"2024M\";
+    public \\$WIKINDX_DB_HOST = \'${WIKINDX_DB_HOST}\';
+    public \\$WIKINDX_DB = \'${WIKINDX_DB}\';
+    public \\$WIKINDX_DB_USER = \'${WIKINDX_DB_USER}\';
+    public \\$WIKINDX_DB_PASSWORD = \'${WIKINDX_DB_PASSWORD}\';
+    public \\$WIKINDX_MEMORY_LIMIT = \'2024M\';
     public \\$WIKINDX_PATH_AUTO_DETECTION = TRUE;
-    public \\$WIKINDX_URL_BASE = \"\";
+    public \\$WIKINDX_URL_BASE = \'\';
     public \\$WIKINDX_MAX_EXECUTION_TIMEOUT = 10;
 }
 EOF
